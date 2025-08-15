@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Project Alpha • Case Study</title>
+    <meta name="description" content="Case study for Project Alpha dashboard." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/css/styles.css" as="style" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script>(function(){var x=null;try{x=localStorage.getItem('theme');}catch(e){}if(!x){var m=document.cookie.match(/(?:^|; )theme=(dark|light)(?=;|$)/);if(m)x=m[1];}if(!x){var d=matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches;x=d?'dark':'light';}var lv=null;try{lv=localStorage.getItem('lava');}catch(e){}if(!lv){var m2=document.cookie.match(/(?:^|; )lava=(on|off)(?=;|$)/);if(m2)lv=m2[1];}if(lv==='off'){document.documentElement.classList.add('no-lava');}document.documentElement.classList.toggle('theme-dark',x==='dark');document.documentElement.classList.remove('no-js');})();</script>
+  </head>
+  <body id="top" data-page="project">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="logo" href="index.html">YN</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5V2m0 20v-2.5M4.5 12H2m20 0h-2.5M5.64 5.64 4.22 4.22m15.56 15.56-1.42-1.42M18.36 5.64l1.42-1.42M4.22 19.78l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" fill="currentColor"/></svg>
+      </button>
+    </header>
+    <main id="main" class="container detail">
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Brief</h2></div><div class="section-body"><p>Project Alpha is a realtime dashboard with live charts, alerts, and offline support.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>My Contribution</h2></div><div class="section-body"><p>Built streaming data layer, chart components, and alert rules engine.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Problem</h2></div><div class="section-body"><p>Users needed responsive insights from noisy, high-volume event streams.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Goal</h2></div><div class="section-body"><p>Deliver reliable real-time visibility with minimal latency and clear alerting UX.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Target Users</h2></div><div class="section-body"><p>Ops teams and engineers monitoring production systems.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Research</h2></div><div class="section-body"><p>Evaluated streaming protocols, charting performance, and alert fatigue patterns.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Designing the Product</h2></div><div class="section-body"><p>Card-based layout, color-safe alerting, and keyboard navigation.</p></div></div></section>
+      <section class="reveal detail-section" id="decisions"><div class="detail-grid"><div class="section-title"><h2>Decisions</h2></div><div class="section-body"><div class="sub-decision"><h3>Transport: WebSockets</h3><p>Chose WebSockets over polling for lower latency and network efficiency.</p></div><div class="sub-decision"><h3>Rendering: Canvas</h3><p>Used Canvas charts to keep FPS high under load.</p></div><div class="sub-decision"><h3>Resilience: Offline queue</h3><p>Buffered user actions and reconciled on reconnect to avoid data loss.</p></div></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Next Steps</h2></div><div class="section-body"><p>Introduce anomaly detection and custom dashboards.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"><h2>Takeaways</h2></div><div class="section-body"><p>Optimize the event loop first; controls should never block rendering.</p></div></div></section>
+      <section class="reveal detail-section"><div class="detail-grid"><div class="section-title"></div><div class="section-body"><a href="#top" class="btn ghost back-to-top">Back To Top ↑</a></div></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Your Name</p>
+        <div class="social">
+          <a href="#" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.52 1.05 1.52 1.05.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.64 1.03 2.76 0 3.96-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.38-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.7 4.7 6.2V24h-4v-7.1c0-1.7 0-3.9-2.4-3.9s-2.8 1.8-2.8 3.8V24h-4V8z"/></svg></a>
+          <a href="mailto:hello@example.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg></a>
+        </div>
+        <button id="lavaToggle" class="btn small ghost" aria-pressed="true" title="Toggle animated background">Background: On</button>
+      </div>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  </html>
