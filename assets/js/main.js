@@ -53,19 +53,28 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Contact form mock submit
+  // Contact form handling
   const form = document.querySelector('form[data-contact]');
   if (form) {
+    // Check for success parameter in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      const note = document.getElementById('contact-note');
+      if (note) {
+        note.textContent = 'Thanks! Your message has been sent successfully.';
+        note.classList.add('ok');
+      }
+      // Clean up URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
-      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
-      setTimeout(() => {
-        form.reset();
-        if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
-        const note = document.getElementById('contact-note');
-        if (note) { note.textContent = 'Thanks! Your message is noted.'; note.classList.add('ok'); }
-      }, 700);
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+      }
+      // Form will submit normally to Formspree
     });
   }
 })();
