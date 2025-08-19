@@ -1,0 +1,37 @@
+title: "Saloni Kacholia - UX Designer"
+description: "UX Designer crafting intuitive, human-centered experiences that balance clarity, accessibility, and delight."
+url: "https://vabs.github.io"
+baseurl: "/portfolio-website"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "_projects"
+      type: "projects"
+    values:
+      layout: "project"

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml" />
+    <link rel="preload" href="{{ '/assets/css/styles.css' | relative_url }}" as="style" />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+    <script>(function(){var x=null;try{x=localStorage.getItem('theme');}catch(e){}if(!x){var m=document.cookie.match(/(?:^|; )theme=(dark|light)(?=;|$)/);if(m)x=m[1];}if(!x){var d=matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches;x=d?'dark':'light';}var lv=null;try{lv=localStorage.getItem('lava');}catch(e){}if(!lv){var m2=document.cookie.match(/(?:^|; )lava=(on|off)(?=;|$)/);if(m2)lv=m2[1];}if(lv==='off'){document.documentElement.classList.add('no-lava');}document.documentElement.classList.toggle('theme-dark',x==='dark');document.documentElement.classList.remove('no-js');})();</script>
+  </head>
+  <body data-page="{{ page.page_id | default: 'default' }}">
+    {% include header.html %}
+    
+    <main id="main" class="container">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  </body>
+</html>
